@@ -30,7 +30,7 @@ public class WithdrawCommand implements CommandExecutor, TabCompleter {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
         if (sender instanceof Player && !WhitelistManager.isWorldWhitelisted((Player) sender)) {
-            sender.sendMessage(MessageUtils.getAndFormatMsg(false, "worldNotWhitelisted", "&cThis world is not whitelisted for LifeStealZ!"));
+            sender.sendMessage(MessageUtils.getAndFormatMsg(false, "worldNotWhitelisted", "&cTen swiat nie jest podpiety pod LS"));
             return false;
         }
 
@@ -72,7 +72,7 @@ public class WithdrawCommand implements CommandExecutor, TabCompleter {
         }
 
         if (availableSpace < heartsToWithdraw) {
-            sender.sendMessage(MessageUtils.getAndFormatMsg(false, "noInventorySpace", "&cYou don't have enough inventory space to withdraw that many hearts!"));
+            sender.sendMessage(MessageUtils.getAndFormatMsg(false, "noInventorySpace", "&cNie masz miejsca w inventory"));
             return false;
         }
 
